@@ -5,6 +5,10 @@ class cabine {
     include cabine::couchpotato
     include cabine::plex
 
+    package { 'python':
+        ensure => '2.7.3'
+    }
+
     Class['boxen::config'] ->
       Class['cabine::config'] ->
       Class['cabine::sabnzbd'] ->
