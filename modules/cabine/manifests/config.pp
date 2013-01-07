@@ -64,7 +64,7 @@ class cabine::config {
         $sickbeard_datadir,
         $sickbeard_logdir,
 
-        $couchpotato_movies_dir,
+        $couchpotato_dir,
         $couchpotato_datadir,
         $couchpotato_configdir,
         $couchpotato_logdir,
