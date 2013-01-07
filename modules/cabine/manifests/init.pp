@@ -1,18 +1,12 @@
 class cabine {
-    include cabine::config
-    include cabine::sabnzbd
-    include cabine::sickbeard
-    include cabine::couchpotato
-    include cabine::plex
+    require boxen::config
+    require cabine::config
+    require cabine::sabnzbd
+    require cabine::sickbeard
+    require cabine::couchpotato
+    require cabine::plex
 
     package { 'python':
         ensure => '2.7.3'
     }
-
-    Class['boxen::config'] ->
-      Class['cabine::config'] ->
-      Class['cabine::sabnzbd'] ->
-      Class['cabine::sickbeard'] ->
-      Class['cabine::couchpotato'] ->
-      Class['cabine::plex']
 }
