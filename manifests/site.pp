@@ -45,7 +45,6 @@ Service {
 
 node default {
   include git
-  include python
   include cabine
 
   file { "${boxen::config::srcdir}/our-boxen":
