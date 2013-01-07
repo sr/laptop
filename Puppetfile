@@ -18,7 +18,7 @@ mod "python",   "0.0.1",  :github_tarball => "boxen/puppet-python"
 mod "xquartz",  "0.0.2",  :github_tarball => "boxen/puppet-xquartz"
 mod "stdlib",   "3.0.0",  :github_tarball => "puppetlabs/puppetlabs-stdlib"
 mod "sudo",     "0.0.1",  :github_tarball => "boxen/puppet-sudo"
-mod "cabine",   "0.0.0",  :github_tarball => "sr/puppet-cabine"
+# mod "cabine",   "0.0.0",  :github_tarball => "sr/puppet-cabine"
 
 # Add your custom modules here.
 # There are tons available at https://github.com/boxen.
