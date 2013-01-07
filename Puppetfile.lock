@@ -28,6 +28,11 @@ GITHUBTARBALL
   specs:
     stdlib (3.0.0)
 
+GITHUBTARBALL
+  remote: sr/puppet-cabine
+  specs:
+    cabine (0.0.0)
+
 DEPENDENCIES
   boxen (= 0.0.28)
   git (= 0.0.3)
@@ -35,4 +40,5 @@ DEPENDENCIES
   inifile (= 0.0.1)
   stdlib (= 3.0.0)
   sudo (= 0.0.1)
+  cabine (= 0.0.0)
 

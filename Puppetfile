@@ -16,6 +16,7 @@ mod "homebrew", "0.0.15", :github_tarball => "boxen/puppet-homebrew"
 mod "inifile",  "0.0.1",  :github_tarball => "boxen/puppet-inifile"
 mod "stdlib",   "3.0.0",  :github_tarball => "puppetlabs/puppetlabs-stdlib"
 mod "sudo",     "0.0.1",  :github_tarball => "boxen/puppet-sudo"
+mod "cabine",   "0.0.0",  :github_tarball => "sr/puppet-cabine"
 
 # Add your custom modules here.
 # There are tons available at https://github.com/boxen.
