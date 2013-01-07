@@ -29,6 +29,11 @@ GITHUBTARBALL
     sudo (0.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-xquartz
+  specs:
+    xquartz (0.0.2)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
   specs:
     stdlib (3.0.0)
@@ -47,4 +52,5 @@ DEPENDENCIES
   python (= 0.0.3)
   stdlib (= 3.0.0)
   sudo (= 0.0.1)
+  xquartz (= 0.0.2)
 
