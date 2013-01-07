@@ -45,6 +45,7 @@ Service {
 
 node default {
   include git
+  include cabine
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
