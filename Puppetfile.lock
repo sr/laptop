@@ -19,11 +19,6 @@ GITHUBTARBALL
     inifile (0.0.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-python
-  specs:
-    python (0.0.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (0.0.1)
@@ -43,7 +38,6 @@ DEPENDENCIES
   git (= 0.0.3)
   homebrew (= 0.0.15)
   inifile (= 0.0.1)
-  python (= 0.0.1)
   stdlib (= 3.0.0)
   sudo (= 0.0.1)
   xquartz (= 0.0.2)
