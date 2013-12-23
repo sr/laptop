@@ -53,5 +53,10 @@ github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
 github "xquartz",    "1.1.0"
 
+github "osx"
+github "onepassword"
+github "screen"
+github "ctags"
+
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
