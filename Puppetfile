@@ -57,6 +57,7 @@ github "osx"
 github "onepassword"
 github "screen"
 github "ctags"
+github "dropbox"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
