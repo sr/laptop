@@ -42,34 +42,4 @@ class people::sr {
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
   include osx::software_update
-
-  # dotfiles
-  $homedir = "/Users/${::luser}"
-  $dotfiles = 'https://github.com/sr/dotfiles'
-
-  exec {
-    'dotfiles init':
-      command   => 'git init',
-      cwd       => $homedir,
-      creates   => "${homedir}/.git",
-      logoutput => on_failure,
-      notify    => Exec['dotfiles remote'];
-    'dotfiles remote':
-      command     => "git remote add origin ${dotfiles}",
-      cwd         => $homedir,
-      logoutput   => on_failure,
-      refreshonly => true,
-      notify      => Exec['dotfiles fetch'];
-    'dotfiles fetch':
-      command     => 'git fetch origin',
-      cwd         => $homedir,
-      logoutput   => on_failure,
-      refreshonly => true,
-      notify      => Exec['dotfiles checkout'];
-    'dotfiles checkout':
-      command     => 'git checkout -t origin/master',
-      cwd         => $homedir,
-      logoutput   => on_failure,
-      refreshonly => true;
-  }
 }
