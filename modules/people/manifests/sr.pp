@@ -29,6 +29,7 @@ class people::sr {
       'pwgen',
       'tig',
       'ctags-exuberant',
+      'wget',
   ]: }
 
   # setup all of the projects
