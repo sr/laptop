@@ -21,7 +21,6 @@ class people::sr {
   include ctags
 
   package { [
-      'bash',
       'cowsay',
       'dash',
       'fortune',
