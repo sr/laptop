@@ -2,6 +2,7 @@ class people::sr {
   include onepassword
   include screen
   include dropbox
+  include steam
 
   package {
       'Backblaze':

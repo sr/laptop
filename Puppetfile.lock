@@ -99,6 +99,11 @@ GITHUBTARBALL
     screen (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-steam
+  specs:
+    steam (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -141,6 +146,7 @@ DEPENDENCIES
   ruby (= 6.7.2)
   screen (>= 0)
   stdlib (= 4.1.0)
+  steam (>= 0)
   sudo (= 1.0.0)
   xquartz (= 1.1.0)
 

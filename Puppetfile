@@ -58,6 +58,7 @@ github "onepassword"
 github "screen"
 github "ctags"
 github "dropbox"
+github "steam"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
