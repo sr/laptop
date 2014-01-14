@@ -11,6 +11,9 @@ class people::sr {
       'Plex Home Theater':
           provider => 'compressed_app',
           source   => 'http://downloads.plexapp.com/plex-home-theater/1.0.7.169-303ab8cc/PlexHomeTheater-1.0.7.169-303ab8cc-macosx-x86_64.zip';
+      'TuneUp':
+          provider => 'appdmg',
+          source   => 'http://dvk2ozaytrec6.cloudfront.net/mac3/Sparkle/TuneUp-3.0.6.dmg';
       'VyprVPN':
           provider => 'appdmg',
           source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/VyprVPN-2.1.0.dmg';
