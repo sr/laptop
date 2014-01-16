@@ -1,5 +1,6 @@
 class people::sr {
   include onepassword
+  include chrome
   include screen
   include dropbox
   include steam

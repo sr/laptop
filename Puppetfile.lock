@@ -4,6 +4,11 @@ GITHUBTARBALL
     boxen (3.3.4)
 
 GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-ctags
   specs:
     ctags (1.0.0)
@@ -125,6 +130,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   boxen (= 3.3.4)
+  chrome (>= 0)
   ctags (>= 0)
   dnsmasq (= 1.0.0)
   dropbox (>= 0)
