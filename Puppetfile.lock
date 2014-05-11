@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/boxen/puppet-git
+  ref: cbe603911f93f003eda1a282e24fe585c5681545
+  sha: cbe603911f93f003eda1a282e24fe585c5681545
+  specs:
+    github (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -142,6 +149,7 @@ DEPENDENCIES
   foreman (= 1.2.0)
   gcc (= 2.0.100)
   git (= 2.3.0)
+  github (>= 0)
   go (= 1.1.0)
   homebrew (= 1.9.2)
   hub (= 1.3.0)
