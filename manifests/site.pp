@@ -8,9 +8,6 @@ Exec {
   user        => $boxen_user,
 
   path => [
-    "${boxen::config::home}/rbenv/shims",
-    "${boxen::config::home}/rbenv/bin",
-    "${boxen::config::home}/rbenv/plugins/ruby-build/bin",
     "${boxen::config::home}/homebrew/bin",
     '/usr/bin',
     '/bin',
