@@ -36,7 +36,6 @@ class people::sr {
       'pstree',
       'pwgen',
       'tig',
-      'ctags-exuberant',
       'wget',
   ]: }
 
