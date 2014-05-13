@@ -1,4 +1,5 @@
 class people::sr {
+  include boxen::security
   include onepassword
   include chrome
   include screen
