@@ -59,6 +59,7 @@ github "ruby",        "8.0.2"
 github "stdlib",      "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.1.1"
+github "dash",        "1.0.0"
 
 mod "quotefixformac", :github_tarball => "sr/puppet-quotefixformac"
 

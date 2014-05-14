@@ -21,6 +21,11 @@ GITHUBTARBALL
     ctags (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-dash
+  specs:
+    dash (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.1)
@@ -149,6 +154,7 @@ DEPENDENCIES
   boxen (= 3.6.1)
   chrome (>= 0)
   ctags (>= 0)
+  dash (= 1.0.0)
   dnsmasq (= 1.0.1)
   dropbox (>= 0)
   foreman (= 1.2.0)
