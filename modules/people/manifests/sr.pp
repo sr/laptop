@@ -52,7 +52,7 @@ class people::sr {
   include osx::no_network_dsstores
   include osx::software_update
 
-  file { "/Users/${::luser}/tmp":
+  file { "/Users/${::boxen_user}/tmp":
     ensure => directory;
   }
 }
