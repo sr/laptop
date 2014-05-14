@@ -5,6 +5,7 @@ class people::sr {
   include screen
   include dropbox
   include steam
+  include quotefixformac
 
   package {
       'Backblaze':

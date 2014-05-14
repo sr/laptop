@@ -5,6 +5,11 @@ GIT
   specs:
     github (0.0.1)
 
+PATH
+  remote: /Users/sr/src/sr/puppet-quotefixformac
+  specs:
+    quotefixformac (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -162,6 +167,7 @@ DEPENDENCIES
   osx (>= 0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
+  quotefixformac (>= 0)
   repository (= 2.3.0)
   ruby (= 8.0.2)
   screen (>= 0)
