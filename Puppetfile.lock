@@ -5,11 +5,6 @@ GIT
   specs:
     github (0.0.1)
 
-PATH
-  remote: /Users/sr/src/sr/puppet-quotefixformac
-  specs:
-    quotefixformac (0.0.1)
-
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -144,6 +139,11 @@ GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
     module-data (0.0.3)
+
+GITHUBTARBALL
+  remote: sr/puppet-quotefixformac
+  specs:
+    quotefixformac (1.0.0)
 
 DEPENDENCIES
   boxen (= 3.6.1)

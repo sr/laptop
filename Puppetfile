@@ -60,8 +60,7 @@ github "stdlib",      "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.1.1"
 
-mod "quotefixformac",
-	:path => "/Users/sr/src/sr/puppet-quotefixformac"
+mod "quotefixformac", :github_tarball => "sr/puppet-quotefixformac"
 
 github "chrome"
 github "osx"
