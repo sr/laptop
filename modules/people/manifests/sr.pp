@@ -42,6 +42,7 @@ class people::sr {
       'pwgen',
       'tig',
       'wget',
+      'go',
   ]: }
 
   # setup all of the projects
