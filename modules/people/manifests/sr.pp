@@ -59,6 +59,7 @@ class people::sr {
   # rubies
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
+  ruby::version { '2.0.0-p353': }
 
   ruby_gem { 'bundler':
     gem          => 'bundler',
