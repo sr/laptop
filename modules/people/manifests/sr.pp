@@ -1,4 +1,6 @@
 class people::sr {
+  $boxen_bin = "${::boxen_home}/bin"
+
   include boxen::security
   include onepassword
   include chrome
@@ -69,4 +71,18 @@ class people::sr {
 
   include postgresql
   include redis
+
+  $hkurl = 'https://hkdist.s3.amazonaws.com/hk/20140514/darwin-amd64.gz'
+  $hkdest = "${boxen_bin}/hk"
+
+  exec { 'download hk binary':
+    command => "/usr/bin/curl '${hkurl}' | zcat > '${hkdest}'",
+    creates => $hkdest,
+    require => File[$boxen_bin],
+  }
+
+  file { $hkdest:
+    mode    => '0750',
+    require => Exec['download hk binary'],
+  }
 }
