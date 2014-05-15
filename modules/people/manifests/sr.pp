@@ -44,6 +44,7 @@ class people::sr {
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
   include osx::software_update
+  include osx::keyboard::capslock_to_control
 
   # utilities
   include ctags
