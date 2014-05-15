@@ -1,7 +1,14 @@
 class people::sr {
   $boxen_bin = "${::boxen_home}/bin"
 
+  # ~/tmp
+  file { "/Users/${::boxen_user}/tmp":
+    ensure => directory;
+  }
+
   include boxen::security
+
+  # apps
   include onepassword
   include chrome
   include screen
@@ -31,6 +38,14 @@ class people::sr {
           source   => 'https://s3.amazonaws.com/BBSW-download/Yojimbo_4.0.2.dmg';
   }
 
+  # osx settings
+  include osx::dock::autohide
+  include osx::finder::empty_trash_securely
+  include osx::disable_app_quarantine
+  include osx::no_network_dsstores
+  include osx::software_update
+
+  # utilities
   include ctags
 
   package { [
@@ -47,17 +62,6 @@ class people::sr {
   # setup all of the projects
   include projects::all
 
-  # osx settings
-  include osx::dock::autohide
-  include osx::finder::empty_trash_securely
-  include osx::disable_app_quarantine
-  include osx::no_network_dsstores
-  include osx::software_update
-
-  file { "/Users/${::boxen_user}/tmp":
-    ensure => directory;
-  }
-
   # rubies
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
@@ -73,6 +77,7 @@ class people::sr {
   include redis
   include go
 
+  # heroku client
   $hkurl = 'https://hkdist.s3.amazonaws.com/hk/20140514/darwin-amd64.gz'
   $hkdest = "${boxen_bin}/hk"
 
