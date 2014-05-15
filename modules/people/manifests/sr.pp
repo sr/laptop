@@ -68,4 +68,5 @@ class people::sr {
   }
 
   include postgresql
+  include redis
 }

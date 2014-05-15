@@ -72,6 +72,7 @@ github "dropbox"
 github "steam"
 github "sysctl"
 github "postgresql"
+github "redis"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
