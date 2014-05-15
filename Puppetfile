@@ -70,6 +70,8 @@ github "screen"
 github "ctags"
 github "dropbox"
 github "steam"
+github "sysctl"
+github "postgresql"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

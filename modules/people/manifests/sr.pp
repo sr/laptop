@@ -66,4 +66,6 @@ class people::sr {
     version      => '~>1.6',
     ruby_version => '*',
   }
+
+  include postgresql
 }
