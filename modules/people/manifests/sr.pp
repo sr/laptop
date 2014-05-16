@@ -77,6 +77,7 @@ class people::sr {
   include postgresql
   include redis
   include go
+  include go::1_2
 
   # heroku client
   $hkurl = 'https://hkdist.s3.amazonaws.com/hk/20140514/darwin-amd64.gz'
