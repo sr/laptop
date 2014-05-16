@@ -33,9 +33,6 @@ class people::sr {
       'VyprVPN':
           provider => 'appdmg',
           source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/VyprVPN-2.1.0.dmg';
-      'Yojimbo':
-          provider => 'appdmg',
-          source   => 'https://s3.amazonaws.com/BBSW-download/Yojimbo_4.0.2.dmg';
   }
 
   # osx settings
