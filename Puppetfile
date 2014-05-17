@@ -73,6 +73,7 @@ github "steam"
 github "sysctl"
 github "postgresql"
 github "redis"
+github "hipchat"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
