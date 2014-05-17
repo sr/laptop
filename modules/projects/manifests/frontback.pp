@@ -11,7 +11,7 @@ class projects::frontback {
     nginx      => true,
     postgresql => true,
     redis      => true,
-    ruby       => '2.0.0',
+    ruby       => '2.0.0-p353',
     nodejs     => 'v0.10.26',
     require    => File[$srcdir],
   }
