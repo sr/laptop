@@ -1,29 +1,18 @@
-projects::frontback {
-  #$name = 'frontback'
-  $repodir = "${::boxen_srcdir}/checkthis/frontback"
-  $server_name = 'frontback.dev'
+class projects::frontback {
+  $srcdir = "${::boxen_srcdir}/checkthis"
 
-  include postgresql
-  include redis
-  include nginx
-  include nginx::config
-
-  postgresql::database { 'frontback_development': }
-
-  repository { $repodir:
-    source => 'checkthis/frontback'
+  file { $srcdir:
+    ensure => directory,
   }
 
-  ruby::local { $repodir:
-    version => '2.0.0-p353',
-    require => Repository[$repodir],
-  }
-
-  $nginx_templ = 'projects/shared/nginx.conf.erb'
-
-  file { "${nginx::config::sitesdir}/frontback.conf":
-    content => template($nginx_templ),
-    require => File[$nginx::config::sitesdir],
-    notify  => Service['dev.nginx'],
+  boxen::project { 'frontback':
+    source     => 'checkthis/frontback',
+    dir        => "${srcdir}/frontback",
+    nginx      => true,
+    postgresql => true,
+    redis      => true,
+    ruby       => '2.0.0',
+    nodejs     => 'v0.10.26',
+    require    => File[$srcdir],
   }
 }
