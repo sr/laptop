@@ -1,3 +1,8 @@
+PATH
+  remote: /Users/sr/src/boxen/puppet-quotefixformac
+  specs:
+    quotefixformac (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -104,11 +109,6 @@ GITHUBTARBALL
     postgresql (3.0.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-quotefixformac
-  specs:
-    quotefixformac (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-redis
   specs:
     redis (3.0.3)
@@ -187,7 +187,7 @@ DEPENDENCIES
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
   postgresql (>= 0)
-  quotefixformac (= 1.0.0)
+  quotefixformac (>= 0)
   redis (>= 0)
   repository (= 2.3.0)
   ruby (= 8.0.3)
