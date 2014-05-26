@@ -73,6 +73,17 @@ class people::sr {
     ruby_version => '*',
   }
 
+  ruby_gem {
+    'rb-appscript':
+      ruby_version => '2.1.1',
+      gem          => 'rb-appscript',
+      version      => '0.6.1';
+    'faraday':
+      ruby_version => '2.1.1',
+      gem          => 'faraday',
+      version      => '0.9.0';
+  }
+
  # include go
  # include go::1_2
 
