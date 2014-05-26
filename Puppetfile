@@ -41,11 +41,8 @@ github "module-data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 github "dnsmasq",     "1.0.1"
 github "foreman",     "1.2.0"
 github "gcc",         "2.0.100"
-github "git",         "2.3.0"
-mod "github",
-	:git => "https://github.com/boxen/puppet-git",
-	:ref => "cbe603911f93f003eda1a282e24fe585c5681545"
 github "go",          "1.2.0"
+github "git",         "2.3.1"
 github "homebrew",    "1.9.2"
 github "hub",         "1.3.0"
 github "inifile",     "1.0.3", :repo => "puppetlabs/puppetlabs-inifile"
