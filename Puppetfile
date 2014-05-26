@@ -58,7 +58,7 @@ github "sudo",        "1.0.0"
 github "xquartz",     "1.1.1"
 github "dash",        "1.0.0"
 
-github "quotefixformac", "2.5.4"
+github "quotefixformac", "1.0.0"
 
 github "chrome"
 github "osx"

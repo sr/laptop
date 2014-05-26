@@ -104,6 +104,11 @@ GITHUBTARBALL
     postgresql (3.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-quotefixformac
+  specs:
+    quotefixformac (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-redis
   specs:
     redis (3.0.3)
@@ -158,11 +163,6 @@ GITHUBTARBALL
   specs:
     module-data (0.0.3)
 
-GITHUBTARBALL
-  remote: sr/puppet-quotefixformac
-  specs:
-    quotefixformac (1.0.0)
-
 DEPENDENCIES
   boxen (= 3.6.1)
   chrome (>= 0)
@@ -187,7 +187,7 @@ DEPENDENCIES
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
   postgresql (>= 0)
-  quotefixformac (>= 0)
+  quotefixformac (= 1.0.0)
   redis (>= 0)
   repository (= 2.3.0)
   ruby (= 8.0.3)
