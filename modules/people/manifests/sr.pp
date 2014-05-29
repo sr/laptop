@@ -89,7 +89,7 @@ class people::sr {
   cron { 'gh-omnifocus-sync':
     command     => "chruby-exec 2.1.1 -- $omnifocus_sync",
     user        => $::boxen_user,
-    hour        => '*',
+    special     => 'hourly',
     environment => [
       "PATH='/usr/bin:/bin:${::boxen_home}/chruby/bin'",
       'SHELL="/bin/bash"'
