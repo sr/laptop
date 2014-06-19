@@ -57,6 +57,7 @@ class people::sr {
       'tig',
       'wget',
       'tree',
+      'jq',
   ]: }
 
   # setup all of the projects
