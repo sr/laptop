@@ -58,6 +58,7 @@ class people::sr {
       'wget',
       'tree',
       'jq',
+      'siege',
   ]: }
 
   # setup all of the projects
