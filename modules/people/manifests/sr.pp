@@ -91,7 +91,7 @@ class people::sr {
   $omnifocus_sync = "/Users/${::boxen_user}/bin/omnifocus-gh-sync"
 
   cron { 'gh-omnifocus-sync':
-    command     => "chruby-exec 2.1.1 -- $omnifocus_sync",
+    command     => $omnifocus_sync,
     user        => $::boxen_user,
     special     => 'hourly',
     environment => [
