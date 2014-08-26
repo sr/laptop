@@ -41,7 +41,6 @@ class people::sr {
   include osx::finder::empty_trash_securely
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
-  include osx::software_update
   include osx::keyboard::capslock_to_control
 
   # utilities
