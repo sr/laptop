@@ -1,118 +1,131 @@
 class people::sr {
   $boxen_bin = "${::boxen_home}/bin"
 
-  # ~/tmp
-  file { "/Users/${::boxen_user}/tmp":
-    ensure => directory;
-  }
+  case $::hostname {
+    'stella': {
+      # ~/tmp
+      file { "/Users/${::boxen_user}/tmp":
+        ensure => directory;
+      }
 
-  include boxen::security
+      include boxen::security
 
-  # apps
-  include onepassword
-  include chrome
-  include screen
-  include dropbox
-  include steam
-  include dash
-  include quotefixformac
-  include hipchat
+      # apps
+      include onepassword
+      include chrome
+      include screen
+      include dropbox
+      include steam
+      include dash
+      include quotefixformac
+      include hipchat
 
-  package {
-      'Backblaze':
-          provider => 'appdmg',
-          source   => 'https://secure.backblaze.com/mac/install_backblaze.dmg';
-      'Plex Home Theater':
-          provider => 'compressed_app',
-          source   => 'http://downloads.plexapp.com/plex-home-theater/1.0.7.169-303ab8cc/PlexHomeTheater-1.0.7.169-303ab8cc-macosx-x86_64.zip';
-      'OmniFocus':
-          provider => 'appdmg_eula',
-          source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.6/OmniFocus-1.10.6.dmg';
-      'TuneUp':
-          provider => 'appdmg',
-          source   => 'http://dvk2ozaytrec6.cloudfront.net/mac3/Sparkle/TuneUp-3.0.6.dmg';
-      'VyprVPN':
-          provider => 'appdmg',
-          source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/VyprVPN-2.1.0.dmg';
-  }
+      package {
+          'Backblaze':
+              provider => 'appdmg',
+              source   => 'https://secure.backblaze.com/mac/install_backblaze.dmg';
+          'Plex Home Theater':
+              provider => 'compressed_app',
+              source   => 'http://downloads.plexapp.com/plex-home-theater/1.0.7.169-303ab8cc/PlexHomeTheater-1.0.7.169-303ab8cc-macosx-x86_64.zip';
+          'OmniFocus':
+              provider => 'appdmg_eula',
+              source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.6/OmniFocus-1.10.6.dmg';
+          'TuneUp':
+              provider => 'appdmg',
+              source   => 'http://dvk2ozaytrec6.cloudfront.net/mac3/Sparkle/TuneUp-3.0.6.dmg';
+          'VyprVPN':
+              provider => 'appdmg',
+              source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/VyprVPN-2.1.0.dmg';
+      }
 
-  # osx settings
-  include osx::dock::autohide
-  include osx::finder::empty_trash_securely
-  include osx::disable_app_quarantine
-  include osx::no_network_dsstores
-  include osx::keyboard::capslock_to_control
+      # osx settings
+      include osx::dock::autohide
+      include osx::finder::empty_trash_securely
+      include osx::disable_app_quarantine
+      include osx::no_network_dsstores
+      include osx::keyboard::capslock_to_control
 
-  # utilities
-  include ctags
+      # utilities
+      include ctags
 
-  package { [
-      'cowsay',
-      'dash',
-      'fortune',
-      'mplayer',
-      'pstree',
-      'pwgen',
-      'tig',
-      'wget',
-      'tree',
-      'jq',
-      'siege',
-  ]: }
+      package { [
+          'cowsay',
+          'dash',
+          'fortune',
+          'mplayer',
+          'pstree',
+          'pwgen',
+          'tig',
+          'wget',
+          'tree',
+          'jq',
+          'siege',
+      ]: }
 
-  # setup all of the projects
-  include projects::all
+      # setup all of the projects
+      include projects::all
 
-  # rubies
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  ruby::version { '2.0.0-p353': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
+      # rubies
+      ruby::version { '1.9.3': }
+      ruby::version { '2.0.0': }
+      ruby::version { '2.0.0-p353': }
+      ruby::version { '2.1.0': }
+      ruby::version { '2.1.1': }
 
-  ruby_gem { 'bundler':
-    gem          => 'bundler',
-    version      => '~>1.6',
-    ruby_version => '*',
-  }
+      ruby_gem { 'bundler':
+        gem          => 'bundler',
+        version      => '~>1.6',
+        ruby_version => '*',
+      }
 
-  ruby_gem {
-    'rb-appscript':
-      ruby_version => '2.1.1',
-      gem          => 'rb-appscript',
-      version      => '0.6.1';
-    'faraday':
-      ruby_version => '2.1.1',
-      gem          => 'faraday',
-      version      => '0.9.0';
-  }
+      ruby_gem {
+        'rb-appscript':
+          ruby_version => '2.1.1',
+          gem          => 'rb-appscript',
+          version      => '0.6.1';
+        'faraday':
+          ruby_version => '2.1.1',
+          gem          => 'faraday',
+          version      => '0.9.0';
+      }
 
-  $omnifocus_sync = "/Users/${::boxen_user}/bin/omnifocus-gh-sync"
+      $omnifocus_sync = "/Users/${::boxen_user}/bin/omnifocus-gh-sync"
 
-  cron { 'gh-omnifocus-sync':
-    command     => $omnifocus_sync,
-    user        => $::boxen_user,
-    special     => 'hourly',
-    environment => [
-      'SHELL="/bin/bash"'
-    ],
-  }
+      cron { 'gh-omnifocus-sync':
+        command     => $omnifocus_sync,
+        user        => $::boxen_user,
+        special     => 'hourly',
+        environment => [
+          'SHELL="/bin/bash"'
+        ],
+      }
 
- # include go
- # include go::1_2
+      # include go
+      # include go::1_2
 
-  # heroku client
-  $hkurl = 'https://hkdist.s3.amazonaws.com/hk/20140514/darwin-amd64.gz'
-  $hkdest = "${boxen_bin}/hk"
+      # heroku client
+      $hkurl = 'https://hkdist.s3.amazonaws.com/hk/20140514/darwin-amd64.gz'
+      $hkdest = "${boxen_bin}/hk"
 
-  exec { 'download hk binary':
-    command => "/usr/bin/curl '${hkurl}' | zcat > '${hkdest}'",
-    creates => $hkdest,
-    require => File[$boxen_bin],
-  }
+      exec { 'download hk binary':
+        command => "/usr/bin/curl '${hkurl}' | zcat > '${hkdest}'",
+        creates => $hkdest,
+        require => File[$boxen_bin],
+      }
 
-  file { $hkdest:
-    mode    => '0750',
-    require => Exec['download hk binary'],
+      file { $hkdest:
+        mode    => '0750',
+        require => Exec['download hk binary'],
+      }
+    }
+
+    'dana': {
+      notice("dana")
+      # include cabine
+    }
+
+    default: {
+      fail("Unknown machine: $::hostname")
+    }
   }
 }
