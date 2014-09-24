@@ -28,14 +28,14 @@ class cabine::sabnzbd {
         require => File[$configdir],
     }
 
-    file { '/Library/LaunchDaemons/org.atonie.sabnzbd.plist':
-        content => template('cabine/org.atonie.sabnzbd.plist.erb'),
+    file { '/Library/LaunchDaemons/dev.sabnzbd.plist':
+        content => template('cabine/dev.sabnzbd.plist.erb'),
         group   => 'wheel',
         owner   => 'root',
-        notify  => Service['org.atonie.sabnzbd'],
+        notify  => Service['dev.sabnzbd'],
     }
 
-    service { 'org.atonie.sabnzbd':
+    service { 'dev.sabnzbd':
         ensure  => running,
         require => Repository[$repodir],
     }
