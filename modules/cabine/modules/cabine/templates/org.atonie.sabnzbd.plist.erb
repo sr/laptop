@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>org.atonie.sabnzbd</string>
+
+    <key>Boxen</key>
+    <dict>
+      <key>Description</key>
+      <string>The automated Usenet download tool.</string>
+    </dict>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string><%= scope.lookupvar "cabine::config::python" %></string>
+      <string><%= scope.lookupvar "cabine::sabnzbd::executable" %></string>
+      <string>-f</string>
+      <string><%= scope.lookupvar "cabine::sabnzbd::configfile" %></string>
+      <string>-b</string>
+      <string>0</string>
+      <string>-l</string>
+      <string>2</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true />
+
+    <key>KeepAlive</key>
+    <false />
+
+    <key>WorkingDirectory</key>
+    <string><%= scope.lookupvar "cabine::config::sabnzbd_repodir" %></string>
+
+    <key>StandardErrorPath</key>
+    <string><%= scope.lookupvar "cabine::config::sabnzbd_logdir" %>/console.log</string>
+
+    <key>StandardOutPath</key>
+    <string><%= scope.lookupvar "cabine::config::sabnzbd_logdir" %>/console.log</string>
+</dict>
+</plist>

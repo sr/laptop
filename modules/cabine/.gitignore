@@ -1,0 +1,9 @@
+/.bundle
+/.librarian
+/.tmp
+/bin
+/config/local.rb
+/log
+/tmp
+/shared/*
+!/shared/README.md
