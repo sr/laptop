@@ -2,9 +2,9 @@ class cabine::plex {
     package {
         'Plex Media Server':
             provider => 'appdmg',
-            source   => 'http://plex.r.worldssl.net/PlexMediaServer/0.9.7.9.375-d056f10/PlexMediaServer-0.9.7.9.375-d056f10-OSX.dmg';
-        'Plex Media Center':
+            source   => 'https://downloads.plex.tv/plex-media-server/0.9.9.14.531-7eef8c6/PlexMediaServer-0.9.9.14.531-7eef8c6-OSX.zip';
+        'Plex Home Theater':
             provider => 'compressed_app',
-            source   => 'http://plex.r.worldssl.net/plex-laika/0.9.5.4/Plex-0.9.5.4-973998f.zip';
+            source   => 'https://downloads.plex.tv/plex-home-theater/1.2.2.331-2d6426d7/PlexHomeTheater-1.2.2.331-2d6426d7-macosx-x86_64.zip';
     }
 }
