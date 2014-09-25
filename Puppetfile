@@ -73,6 +73,7 @@ github "sysctl"
 github "postgresql"
 github "redis"
 github "hipchat"
+github "superduper"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

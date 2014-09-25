@@ -144,6 +144,11 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-superduper
+  specs:
+    superduper (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sysctl
   specs:
     sysctl (1.0.1)
@@ -201,6 +206,7 @@ DEPENDENCIES
   stdlib (= 4.2.1)
   steam (>= 0)
   sudo (= 1.0.0)
+  superduper (>= 0)
   sysctl (>= 0)
   xquartz (= 1.1.1)
 
