@@ -195,21 +195,4 @@ script = Default
 newzbin = ""
 dir = /Users/sr/Downloads/epl
 [rss]
-[[EPL]]
-pp = ""
-enable = 1
-name = EPL
-script = Default
-uri = http://www.nzbindex.nl/rss/?q=EPL&g[]=687&g[]=356&age=30&sort=agedesc&minsize=700&complete=1&max=25&more=1
-cat = epl
-priority = -100
-filter0 = "", "", "", A, *, -100, 1
-[[La Liga]]
-pp = ""
-enable = 1
-name = La Liga
-script = ""
-uri = http://www.nzbindex.nl/rss/?q=La%20Liga&g[]=687&g[]=356&age=30&sort=agedesc&minsize=700&complete=1&max=25&more=1
-cat = ""
-priority = -100
-filter0 = "", "", "", A, *, -100, 1
+<%= scope.function_file("people/sr/sabnzbd_rss.ini") %>
