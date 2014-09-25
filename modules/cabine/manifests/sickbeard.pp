@@ -5,7 +5,8 @@ class cabine::sickbeard {
     $executable = "${repodir}/SickBeard.py"
 
     repository { $repodir:
-        source => 'midgetspy/Sick-Beard'
+        source => 'midgetspy/Sick-Beard',
+        ensure => 'fb37d332b333b43e7bcae46b619ae6b7ef94e266'
     }
 
     file { $configfile:
