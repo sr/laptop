@@ -25,7 +25,7 @@ class cabine::sabnzbd {
 
     file { $configfile:
         content => template('cabine/sabnzbd.ini.erb'),
-        notify  => Service['org.atonie.sabnzbd'],
+        notify  => Service['dev.sabnzbd'],
         require => File[$configdir],
     }
 
