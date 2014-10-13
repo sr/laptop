@@ -18,7 +18,6 @@ class people::sr {
       include steam
       include dash
       include quotefixformac
-      include hipchat
       include superduper
 
       package {
