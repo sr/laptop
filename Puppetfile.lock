@@ -121,7 +121,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (8.1.2)
+    ruby (8.1.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-screen
@@ -195,7 +195,7 @@ DEPENDENCIES
   quotefixformac (>= 0)
   redis (>= 0)
   repository (= 2.3.0)
-  ruby (= 8.1.2)
+  ruby (= 8.1.4)
   screen (>= 0)
   stdlib (= 4.2.1)
   steam (>= 0)
