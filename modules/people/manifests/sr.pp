@@ -17,7 +17,7 @@ class people::sr {
       include dropbox
       include steam
       include dash
-      include quotefixformac
+      # include quotefixformac
       include superduper
 
       package {
