@@ -60,6 +60,7 @@ class people::sr {
           'tree',
           'jq',
           'siege',
+          'ansible',
       ]: }
 
       # setup all of the projects
