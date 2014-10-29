@@ -73,6 +73,7 @@ github "sysctl"
 github "postgresql"
 github "redis"
 github "superduper"
+github "firefox"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

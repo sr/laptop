@@ -19,6 +19,7 @@ class people::sr {
       include dash
       # include quotefixformac
       include superduper
+      include firefox
 
       package {
           'Backblaze':

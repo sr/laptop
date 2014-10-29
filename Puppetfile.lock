@@ -34,6 +34,11 @@ GITHUBTARBALL
     dropbox (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-firefox
+  specs:
+    firefox (1.2.3)
+
+GITHUBTARBALL
   remote: boxen/puppet-foreman
   specs:
     foreman (1.2.0)
@@ -175,6 +180,7 @@ DEPENDENCIES
   dash (= 1.0.0)
   dnsmasq (= 1.0.1)
   dropbox (>= 0)
+  firefox (>= 0)
   foreman (= 1.2.0)
   gcc (= 2.1.1)
   git (= 2.5.0)
