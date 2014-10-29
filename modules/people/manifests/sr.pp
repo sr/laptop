@@ -3,12 +3,12 @@ class people::sr {
 
   case $::hostname {
     'stella': {
+      include boxen::security
+
       # ~/tmp
       file { "/Users/${::boxen_user}/tmp":
         ensure => directory;
       }
-
-      include boxen::security
 
       # apps
       include chrome
@@ -16,7 +16,6 @@ class people::sr {
       include dropbox
       include firefox
       include onepassword
-      # include quotefixformac
       include screen
       include steam
       include superduper
@@ -48,7 +47,6 @@ class people::sr {
 
       # utilities
       include ctags
-
       package { [
           'cowsay',
           'dash',
@@ -102,9 +100,6 @@ class people::sr {
         ],
       }
 
-      # include go
-      # include go::1_2
-
       # heroku client
       $hkurl = 'https://hkdist.s3.amazonaws.com/hk/20140514/darwin-amd64.gz'
       $hkdest = "${boxen_bin}/hk"
@@ -123,7 +118,6 @@ class people::sr {
 
     'dana': {
       notice("dana")
-      # include cabine
     }
 
     default: {
