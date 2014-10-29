@@ -11,15 +11,15 @@ class people::sr {
       include boxen::security
 
       # apps
-      include onepassword
       include chrome
-      include screen
-      include dropbox
-      include steam
       include dash
-      # include quotefixformac
-      include superduper
+      include dropbox
       include firefox
+      include onepassword
+      # include quotefixformac
+      include screen
+      include steam
+      include superduper
 
       package {
           'Backblaze':
