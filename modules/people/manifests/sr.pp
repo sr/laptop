@@ -17,17 +17,9 @@ class people::sr {
     'stella': {
       include boxen::security
 
-      service { 'backup.github':
-        ensure  => running,
-      }
-
       file { "${home}/Library/LaunchAgents/backup.github.plist":
         content => template('people/backup.github.plist.erb'),
         notify  => Service['backup.github'],
-      }
-
-      service { 'backup.omnifaria':
-        ensure  => running,
       }
 
       file { "${home}/Library/LaunchAgents/backup.omnifaria.plist":
