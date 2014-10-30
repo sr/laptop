@@ -1,9 +1,24 @@
 class people::sr {
   $boxen_bin = "${::boxen_home}/bin"
 
+  $home = "/Users/${::boxen_user}"
+  $backup_github_bin = "$home/bin/backup-github"
+  $backup_github_dir = "$home/Documents/GitHub"
+  $backup_github_log = "${::boxen::config::logdir}/backup-github.log"
+  $backup_github_interval = "432000"
+
   case $::hostname {
     'stella': {
       include boxen::security
+
+      service { 'backup.github':
+        ensure  => running,
+      }
+
+      file { "${home}/Library/LaunchAgents/backup.github.plist":
+        content => template('people/backup.github.plist.erb'),
+        notify  => Service['backup.github'],
+      }
 
       # ~/tmp
       file { "/Users/${::boxen_user}/tmp":
