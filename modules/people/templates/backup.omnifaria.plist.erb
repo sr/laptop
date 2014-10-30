@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>backup.omnifaria</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string><%= scope.lookupvar "people::sr::backup_omnifaria_bin" %></string>
+    <string><%= scope.lookupvar "people::sr::backup_omnifaria_dir" %></string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string><%= scope.lookupvar "people::sr::home" %>/bin:<%= scope.lookupvar("boxen::config::homebrewdir") %>/bin:/usr/bin:/bin</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string><%= scope.lookupvar "people::sr::backup_omnifaria_log" %></string>
+  <key>StandardErrorPath</key>
+  <string><%= scope.lookupvar "people::sr::backup_omnifaria_log" %></string>
+
+  <key>StartInterval</key>
+  <integer><%= scope.lookupvar "people::sr::backup_omnifaria_interval" %></integer>
+</dict>
+</plist>
