@@ -187,12 +187,3 @@ name = <%= scope.lookupvar "cabine::config::sabnzbd_couchpotato_category" %>
 script = Default
 newzbin = ""
 dir = <%= scope.lookupvar "cabine::config::sabnzbd_couchpotatodir" %>
-[[epl]]
-priority = -100
-pp = ""
-name = epl
-script = Default
-newzbin = ""
-dir = /Users/sr/Downloads/epl
-[rss]
-<%= scope.function_file("people/sr/sabnzbd_rss.ini") %>
