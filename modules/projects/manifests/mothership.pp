@@ -5,6 +5,6 @@ class projects::mothership {
     nginx      => true,
     postgresql => true,
     redis      => true,
-    ruby       => '2.1.3',
+    ruby       => '2.1.4',
   }
 }
