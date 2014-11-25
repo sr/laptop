@@ -18,7 +18,7 @@ class cabine::sabnzbd {
     }
 
     repository { $repodir:
-        ensure  => 'c237ddfef464649ec3713d43c441def6c8656f46',
+        ensure  => '0.7.20',
         source  => 'sabnzbd/sabnzbd',
         require => File[$cabine::config::sabnzbd_datadir],
     }
