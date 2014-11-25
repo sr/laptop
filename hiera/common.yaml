@@ -7,3 +7,7 @@ ruby::build::ensure: e7810a61eb08ef28df3ac03e9429dc2fe0725944
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 51
+
+# cabine
+cabine::tv_dir: "/tmp/tv"
+cabine::movies_dir: "/tmp/movies"

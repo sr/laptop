@@ -23,7 +23,7 @@ class cabine::config {
     $sabnzbd_nzbkey = $::cabine_sabnzbd_nzbkey
     $sabnzbd_host = "http://0.0.0.0:8080/"
 
-    $sickbeard_rootdir = $::cabine_tv_dir
+    $sickbeard_rootdir = hiera('cabine::tv_dir')
     $sickbeard_configdir = "${::boxen::config::configdir}/sickbeard"
     $sickbeard_logdir = "${::boxen::config::logdir}/sickbeard"
     $sickbeard_datadir = "${::boxen::config::datadir}/sickbeard"
@@ -37,7 +37,7 @@ class cabine::config {
     $couchpotato_logdir = "${::boxen::config::logdir}/couchpotato"
     $couchpotato_repodir = "${couchpotato_datadir}/repo"
     $couchpotato_apikey = $::cabine_couchpotato_apikey
-    $couchpotato_dir = $::cabine_movies_dir
+    $couchpotato_dir = hiera('cabine::movies_dir')
 
     $nzbsrus_uid = "366986"
     $nzbsrus_hash = "16f72b"
