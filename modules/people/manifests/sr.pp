@@ -82,6 +82,7 @@ class people::sr {
           'jq',
           'siege',
           'ansible',
+          'keychain',
       ]: }
 
       # setup all of the projects
