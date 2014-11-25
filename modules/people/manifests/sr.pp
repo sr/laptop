@@ -122,6 +122,18 @@ class people::sr {
         ],
       }
 
+      $backup_irclogs = "/Users/${::boxen_user}/bin/backup-irclogs"
+
+      cron { 'backup-irclogs':
+        command     => $backup_irclogs,
+        user        => $::boxen_user,
+        special     => 'hourly',
+        environment => [
+          'SHELL="/bin/bash"',
+          'PATH="/Users/sr/bin:/usr/bin:/bin"',
+        ],
+      }
+
       # heroku client
       $hkurl = 'https://hkdist.s3.amazonaws.com/hk/20140514/darwin-amd64.gz'
       $hkdest = "${boxen_bin}/hk"
