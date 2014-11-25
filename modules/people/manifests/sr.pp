@@ -17,15 +17,15 @@ class people::sr {
     'stella': {
       include boxen::security
 
-      file { "${home}/Library/LaunchAgents/backup.github.plist":
-        content => template('people/backup.github.plist.erb'),
-        notify  => Service['backup.github'],
-      }
+      /* file { "${home}/Library/LaunchAgents/backup.github.plist": */
+      /*   content => template('people/backup.github.plist.erb'), */
+      /*   notify  => Service['backup.github'], */
+      /* } */
 
-      file { "${home}/Library/LaunchAgents/backup.omnifaria.plist":
-        content => template('people/backup.omnifaria.plist.erb'),
-        notify  => Service['backup.omnifaria'],
-      }
+      /* file { "${home}/Library/LaunchAgents/backup.omnifaria.plist": */
+      /*   content => template('people/backup.omnifaria.plist.erb'), */
+      /*   notify  => Service['backup.omnifaria'], */
+      /* } */
 
       # ~/tmp
       file { "/Users/${::boxen_user}/tmp":
