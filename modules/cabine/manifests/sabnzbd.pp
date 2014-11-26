@@ -1,4 +1,6 @@
 class cabine::sabnzbd {
+    require python
+
     $repodir = $cabine::config::sabnzbd_repodir
     $configdir = $cabine::config::sabnzbd_configdir
     $logdir = $cabine::config::sabnzbd_logdir
