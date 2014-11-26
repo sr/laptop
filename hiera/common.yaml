@@ -8,6 +8,14 @@ ruby::build::ensure: e7810a61eb08ef28df3ac03e9429dc2fe0725944
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 51
 
-# cabine
 cabine::tv_dir: "/tmp/tv"
 cabine::movies_dir: "/tmp/movies"
+cabine::server::host: "news-europe.giganews.com"
+cabine::server::port: "563"
+cabine::server::user: "foobarspam"
+cabine::server::password: "N2bkDbGbraPg9c"
+cabine::server::ssl: "1"
+cabine::server::connections: "10"
+cabine::sabnzbd_apikey: "3ee542aad0010126c9bd56ef59469f13"
+cabine::sabnzbd_nzbkey: "d3899a43e6393f682bae696deac89bc6"
+cabine::couchpotato_apikey: "ed5380776dc54afc9995d9a4b367be8e"
