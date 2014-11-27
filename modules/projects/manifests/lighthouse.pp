@@ -4,6 +4,6 @@ class projects::lighthouse {
     dir        => "${::boxen::config::srcdir}/lighthouse",
     nginx      => true,
     redis      => true,
-    ruby       => '2.1.4',
+    ruby       => '2.1.5',
   }
 }
