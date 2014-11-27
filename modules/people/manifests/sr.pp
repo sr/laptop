@@ -128,7 +128,8 @@ class people::sr {
       cron { 'backup-irclogs':
         command     => $backup_irclogs,
         user        => $::boxen_user,
-        special     => 'hourly',
+        special     => absent,
+        hour        => '*/6',
         environment => [
           'SHELL="/bin/bash"',
           'PATH="/Users/sr/bin:/usr/bin:/bin"',
