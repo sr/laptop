@@ -3,7 +3,7 @@
 ruby::provider: "chruby"
 ruby::version::alias:
   2.0.0: 2.0.0-p353
-ruby::build::ensure: e7810a61eb08ef28df3ac03e9429dc2fe0725944
+ruby::build::ensure: v20141113
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 51
