@@ -1,8 +1,3 @@
-PATH
-  remote: /Users/sr/src/boxen/puppet-quotefixformac
-  specs:
-    quotefixformac (0.0.1)
-
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
