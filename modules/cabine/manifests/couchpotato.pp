@@ -22,7 +22,7 @@ class cabine::couchpotato {
     }
 
     service { 'org.atonie.couchpotato':
-        ensure  => running,
+        ensure  => absent,
         require => Repository[$repodir],
     }
 
