@@ -13,7 +13,7 @@ class cabine::couchpotato {
 
     file { $configfile:
         content => template('cabine/couchpotato.ini.erb'),
-        notify  => Service['org.atonie.couchpotato'],
+        notify  => Service['dev.couchpotato'],
         require => File[$configdir],
     }
 
