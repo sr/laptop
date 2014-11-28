@@ -19,8 +19,8 @@ class cabine::couchpotato {
 
     file { '/Library/LaunchDaemons/dev.couchpotato.plist':
         content => template('cabine/dev.couchpotato.plist.erb'),
-        group   => 'staff',
-        owner   => $::boxen_user,
+        group   => 'wheel',
+        owner   => 'root',
         notify  => Service['dev.couchpotato'],
     }
 
