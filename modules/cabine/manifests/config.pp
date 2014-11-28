@@ -10,6 +10,7 @@ class cabine::config {
     $sabnzbd_serverpassword = hiera('cabine::server::password')
     $sabnzbd_serverssl = hiera('cabine::server::ssl')
     $sabnzbd_serverconns = hiera('cabine::server::connections')
+    $sabnzbd_serverretention = hiera('cabine::server::retention')
 
     $downloadsdir = "/Users/${::luser}/Downloads"
 

@@ -207,4 +207,4 @@ enable = 1
 timeout = 120
 fillserver = 0
 optional = 0
-retention = 0
+retention = <%= scope.lookupvar "cabine::config::serverretention" %>
