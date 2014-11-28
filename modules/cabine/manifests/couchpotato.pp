@@ -57,6 +57,14 @@ class cabine::couchpotato(
       section => 'sabnzbd',
       setting => 'api_key',
       value   => $sabnzbd_apikey;
+    'renamer_enabled':
+      section => 'renamer',
+      setting => 'enabled',
+      value   => 'True';
+    'renamer_cleanup':
+      section => 'renamer',
+      setting => 'cleanup',
+      value   => 'True';
     'renamer_from':
       section => 'renamer',
       setting => 'from',
