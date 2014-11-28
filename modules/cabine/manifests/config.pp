@@ -38,7 +38,7 @@ class cabine::config {
     $couchpotato_configdir = "${::boxen::config::configdir}/couchpotato"
     $couchpotato_logdir = "${::boxen::config::logdir}/couchpotato"
     $couchpotato_repodir = "${couchpotato_datadir}/repo"
-    $couchpotato_apikey = $::cabine_couchpotato_apikey
+    $couchpotato_apikey = hiera('cabine::couchpotato::apikey')
     $couchpotato_dir = hiera('cabine::movies_dir')
 
     $nzbsrus_uid = "366986"
