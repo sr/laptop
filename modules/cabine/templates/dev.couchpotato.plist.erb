@@ -17,7 +17,7 @@
 
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/bin/python</string>
+      <string><%= scope.lookupvar "cabine::config::python" %></string>
       <string><%= scope.lookupvar "cabine::couchpotato::executable" %></string>
       <string>--config_file</string>
       <string><%= scope.lookupvar "cabine::couchpotato::configfile" %></string>
