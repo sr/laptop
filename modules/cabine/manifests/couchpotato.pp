@@ -22,6 +22,7 @@ class cabine::couchpotato {
 
     file { $configfile:
         source  => 'puppet:///modules/cabine/couchpotato2.ini.erb',
+        replace => false,
         notify  => Service['dev.couchpotato'],
         require => File[$configdir],
     }
