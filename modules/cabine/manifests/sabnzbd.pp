@@ -1,5 +1,8 @@
-class cabine::sabnzbd {
-  # sabnzbd.ini variables
+class cabine::sabnzbd(
+  $repo    = 'sabnzbd/sabnzbd',
+  $version = '0.7.20',
+) {
+
   $logdir = $cabine::config::sabnzbd_logdir
   $admindir = $cabine::config::sabnzbd_admindir
   $downloaddir = $cabine::config::sabnzbd_incompletedir
@@ -29,8 +32,8 @@ class cabine::sabnzbd {
   }
 
   repository { $repodir:
-    ensure  => '0.7.20',
-    source  => 'sabnzbd/sabnzbd',
+    source  => $repo,
+    ensure  => $version,
     require => File[$cabine::config::sabnzbd_datadir],
   }
 
