@@ -26,7 +26,7 @@ class cabine::couchpotato {
         require => Repository[$repodir],
     }
 
-    file { '/Library/LaunchDaemons/dev.couchpotato.plist':
+    file { '/Library/LaunchAgents/dev.couchpotato.plist':
         content => template('cabine/dev.couchpotato.plist.erb'),
         group   => 'staff',
         owner   => $::boxen_user,
