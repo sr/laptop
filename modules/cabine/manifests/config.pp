@@ -29,6 +29,7 @@ class cabine::config {
     $sabnzbd_nzbkey = $::cabine_sabnzbd_nzbkey
     $sabnzbd_host = "http://0.0.0.0:8080/"
 
+    $sickbeard_rootdir = hiera('cabine::tv_dir')
     $sickbeard_configdir = "${::boxen::config::configdir}/sickbeard"
     $sickbeard_logdir = "${::boxen::config::logdir}/sickbeard"
     $sickbeard_datadir = "${::boxen::config::datadir}/sickbeard"
