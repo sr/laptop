@@ -1,5 +1,7 @@
 class cabine::config {
     $downloadsdir = "/Users/${::luser}/Downloads"
+    $user = hiera('cabine::user', $::boxen_user)
+    $group = hiera('cabine::group', 'staff')
 
     $sabnzbd_configdir = "${::boxen::config::configdir}/sabnzbd"
     $sabnzbd_datadir = "${::boxen::config::datadir}/sabnzbd"
