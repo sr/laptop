@@ -1,5 +1,7 @@
-class cabine::couchpotato {
-    $version = 'build/2.6.1'
+class cabine::couchpotato(
+  $repo    = 'RuudBurger/CouchPotatoServer',
+  $version = 'build/2.6.1',
+) {
 
     # couchpotato.ini settings
     $apikey = $cabine::config::couchpotato_apikey
@@ -15,7 +17,7 @@ class cabine::couchpotato {
     $executable = "${repodir}/CouchPotato.py"
 
     repository { $repodir:
-        source  => 'RuudBurger/CouchPotatoServer',
+        source  => $repo,
         ensure  => $version,
         require => File[$cabine::config::couchpotato_datadir],
     }
