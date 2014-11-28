@@ -17,15 +17,6 @@ class cabine::couchpotato {
         require => File[$configdir],
     }
 
-    file { '/Library/LaunchDaemons/org.atonie.couchpotato.plist':
-      ensure => absent
-    }
-
-    service { 'org.atonie.couchpotato':
-        ensure  => absent,
-        require => Repository[$repodir],
-    }
-
     file { '/Library/LaunchDaemons/dev.couchpotato.plist':
         content => template('cabine/dev.couchpotato.plist.erb'),
         group   => 'staff',
