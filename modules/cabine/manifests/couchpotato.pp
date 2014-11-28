@@ -6,6 +6,7 @@ class cabine::couchpotato {
 
     repository { $repodir:
         source  => 'RuudBurger/CouchPotatoServer',
+        ensure  => 'build/2.6.1',
         require => File[$cabine::config::couchpotato_datadir],
     }
 
