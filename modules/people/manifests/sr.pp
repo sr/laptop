@@ -83,6 +83,7 @@ class people::sr {
           'siege',
           'ansible',
           'keychain',
+          'ssh-copy-id',
       ]: }
 
       # setup all of the projects
