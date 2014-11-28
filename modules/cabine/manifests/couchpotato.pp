@@ -47,7 +47,7 @@ class cabine::couchpotato(
       value   => 'False';
     'core_launch_browser':
       section => 'core',
-      setting => 'True',
+      setting => 'launch_browser',
       value   => 'False';
     'newznab_api_key':
       section => 'newznab',
