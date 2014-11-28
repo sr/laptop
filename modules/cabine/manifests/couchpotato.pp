@@ -3,10 +3,11 @@ class cabine::couchpotato {
     $configdir = $cabine::config::couchpotato_configdir
     $configfile = "${configdir}/config.ini"
     $executable = "${repodir}/CouchPotato.py"
+    $version = 'build/2.6.1'
 
     repository { $repodir:
         source  => 'RuudBurger/CouchPotatoServer',
-        ensure  => 'build/2.6.1',
+        ensure  => $version,
         require => File[$cabine::config::couchpotato_datadir],
     }
 
@@ -17,13 +18,22 @@ class cabine::couchpotato {
     }
 
     file { '/Library/LaunchDaemons/org.atonie.couchpotato.plist':
-        content => template('cabine/org.atonie.couchpotato.plist.erb'),
-        group   => 'wheel',
-        owner   => 'root',
-        notify  => Service['org.atonie.couchpotato'],
+      ensure => absent
     }
 
     service { 'org.atonie.couchpotato':
+        ensure  => running,
+        require => Repository[$repodir],
+    }
+
+    file { '/Library/LaunchDaemons/dev.couchpotato.plist':
+        content => template('cabine/dev.couchpotato.plist.erb'),
+        group   => 'staff',
+        owner   => $::boxen_user,
+        notify  => Service['dev.couchpotato'],
+    }
+
+    service { 'dev.couchpotato':
         ensure  => running,
         require => Repository[$repodir],
     }
