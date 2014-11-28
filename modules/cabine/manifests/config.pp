@@ -1,7 +1,17 @@
 class cabine::config {
-    $downloadsdir = "/Users/${::luser}/Downloads"
+    # user and groups used to run the sabnzbd and couchpotato servers
     $user = hiera('cabine::user', $::boxen_user)
     $group = hiera('cabine::group', 'staff')
+
+    # usenet server connections details
+    $sabnzbd_server = hiera('cabine::server::host')
+    $sabnzbd_serverport = hiera('cabine::server::port')
+    $sabnzbd_serveruser = hiera('cabine::server::user')
+    $sabnzbd_serverpassword = hiera('cabine::server::password')
+    $sabnzbd_serverssl = hiera('cabine::server::ssl')
+    $sabnzbd_serverconns = hiera('cabine::server::connections')
+
+    $downloadsdir = "/Users/${::luser}/Downloads"
 
     $sabnzbd_configdir = "${::boxen::config::configdir}/sabnzbd"
     $sabnzbd_datadir = "${::boxen::config::datadir}/sabnzbd"
@@ -15,17 +25,10 @@ class cabine::config {
     $sabnzbd_couchpotatodir = "${sabnzbd_downloaddir}/couchpotato"
     $sabnzbd_sickbeard_category = "sickbeard"
     $sabnzbd_couchpotato_category = "couchpotato"
-    $sabnzbd_server = hiera('cabine::server::host')
-    $sabnzbd_serverport = hiera('cabine::server::port')
-    $sabnzbd_serveruser = hiera('cabine::server::user')
-    $sabnzbd_serverpassword = hiera('cabine::server::password')
-    $sabnzbd_serverssl = hiera('cabine::server::ssl')
-    $sabnzbd_serverconns = hiera('cabine::server::connections')
     $sabnzbd_apikey = $::cabine_sabnzbd_apikey
     $sabnzbd_nzbkey = $::cabine_sabnzbd_nzbkey
     $sabnzbd_host = "http://0.0.0.0:8080/"
 
-    $sickbeard_rootdir = hiera('cabine::tv_dir')
     $sickbeard_configdir = "${::boxen::config::configdir}/sickbeard"
     $sickbeard_logdir = "${::boxen::config::logdir}/sickbeard"
     $sickbeard_datadir = "${::boxen::config::datadir}/sickbeard"
