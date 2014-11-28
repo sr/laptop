@@ -41,6 +41,10 @@ class cabine::couchpotato(
       section => 'core',
       setting => 'api_key',
       value => $apikey;
+    'core_show_wizard':
+      section => 'core',
+      setting => 'show_wizard',
+      value   => 'False';
     'core_launch_browser':
       section => 'core',
       setting => 'True',
