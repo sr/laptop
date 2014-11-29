@@ -17,8 +17,6 @@ class cabine::sabnzbd(
   $configfile = "${configdir}/config.ini"
   $executable = "${repodir}/SABnzbd.py"
 
-  require python
-
   package {
     'pysqlite':
       ensure   => '2.6.3',
