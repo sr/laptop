@@ -3,6 +3,9 @@ class cabine::sabnzbd(
   $version = '0.7.20',
 ) {
 
+  # sabnzbd ini config settings
+  $host = '0.0.0.0'
+  $port = '8080'
   $logdir = $cabine::config::sabnzbd_logdir
   $admindir = $cabine::config::sabnzbd_admindir
   $downloaddir = $cabine::config::sabnzbd_incompletedir
@@ -53,6 +56,14 @@ class cabine::sabnzbd(
   }
 
   ini_setting {
+    'host':
+      section => 'misc',
+      setting => 'host',
+      value   => $host;
+    'port':
+      section => 'misc',
+      setting => 'port',
+      value   => $port;
     'log_dir':
       section => 'misc',
       setting => 'log_dir',
