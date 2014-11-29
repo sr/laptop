@@ -150,8 +150,6 @@ class people::sr {
         mode    => '0750',
         require => Exec['download hk binary'],
       }
-
-      include cabine
     }
 
     'dana': {
