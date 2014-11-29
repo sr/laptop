@@ -35,8 +35,8 @@ class cabine::sabnzbd(
   }
 
   repository { $repodir:
-    source  => $repo,
     ensure  => $version,
+    source  => $repo,
     require => File[$cabine::config::sabnzbd_datadir],
   }
 
