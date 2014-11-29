@@ -4,14 +4,14 @@ class people::sr {
   $home = "/Users/${::boxen_user}"
 
   # backup configs
-  $backup_github_bin = "$home/bin/backup-github"
-  $backup_github_dir = "$home/Documents/GitHub"
+  $backup_github_bin = "${home}/bin/backup-github"
+  $backup_github_dir = "${home}/Documents/GitHub"
   $backup_github_log = "${::boxen::config::logdir}/backup-github.log"
-  $backup_github_interval = "432000"
-  $backup_omnifaria_bin = "$home/bin/backup-omnifaria"
-  $backup_omnifaria_dir = "$home/Documents/Omnifaria"
+  $backup_github_interval = '432000'
+  $backup_omnifaria_bin = "${home}/bin/backup-omnifaria"
+  $backup_omnifaria_dir = "${home}/Documents/Omnifaria"
   $backup_omnifaria_log = "${::boxen::config::logdir}/backup-omnifaria.log"
-  $backup_omnifaria_interval = "432000"
+  $backup_omnifaria_interval = '432000'
 
   case $::hostname {
     'stella': {
@@ -156,11 +156,11 @@ class people::sr {
     }
 
     'dana': {
-      notice("dana")
+      notice('dana')
     }
 
     default: {
-      fail("Unknown machine: $::hostname")
+      fail("Unknown machine: ${::hostname}")
     }
   }
 }
