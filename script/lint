@@ -1,3 +1,3 @@
 #!/bin/sh
 export PATH="bin/:$PATH"
-pupprt-lint --with-filename modules/ | grep -v 'not documented'
+puppet-lint --with-filename modules/ | grep -v 'not documented'
