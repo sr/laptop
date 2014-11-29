@@ -7,6 +7,7 @@ class cabine::couchpotato(
   $apikey = $cabine::config::couchpotato_apikey
   $newznab_apikey = $cabine::config::newznab_apikey
   $sabnzbd_apikey = $cabine::config::sabnzbd_apikey
+  $sabnzbd_category = $cabine::config::sabnzbd_couchpotato_category
   $sourcedir = $cabine::config::sabnzbd_completedir
   $destdir = $cabine::config::couchpotato_dir
 
@@ -61,6 +62,10 @@ class cabine::couchpotato(
       section => 'sabnzbd',
       setting => 'api_key',
       value   => $sabnzbd_apikey;
+    'sabnzbd_category':
+      section => 'sabnzbd',
+      setting => 'category',
+      value   => $sabnzbd_category;
     'renamer_enabled':
       section => 'renamer',
       setting => 'enabled',
