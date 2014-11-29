@@ -4,4 +4,5 @@ class cabine {
   require cabine::python
   require cabine::sabnzbd
   require cabine::couchpotato
+  require cabine::plex
 }
