@@ -66,12 +66,10 @@ class cabine::config {
     $sabnzbd_sickbearddir,
     $sabnzbd_couchpotatodir,
 
-    $sickbeard_rootdir,
     $sickbeard_configdir,
     $sickbeard_datadir,
     $sickbeard_logdir,
 
-    $couchpotato_dir,
     $couchpotato_datadir,
     $couchpotato_configdir,
     $couchpotato_logdir,
