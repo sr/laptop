@@ -27,7 +27,10 @@ class cabine::sabnzbd(
       ensure   => '2.4.4',
       provider => pip;
     'pyOpenSSL':
-      ensure   => latest,
+      ensure   => '0.14',
+      provider => pip;
+    'pycparser':
+      ensure   => '2.10',
       provider => pip;
   }
 
