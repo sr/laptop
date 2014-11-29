@@ -13,6 +13,13 @@ class people::sr {
   $backup_omnifaria_log = "${::boxen::config::logdir}/backup-omnifaria.log"
   $backup_omnifaria_interval = '432000'
 
+  # osx settings
+  include osx::dock::autohide
+  include osx::finder::empty_trash_securely
+  include osx::disable_app_quarantine
+  include osx::no_network_dsstores
+  include osx::keyboard::capslock_to_control
+
   case $::hostname {
     'stella': {
       include boxen::security
@@ -59,13 +66,6 @@ class people::sr {
           provider => 'appdmg',
           source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/VyprVPN-2.1.0.dmg';
       }
-
-      # osx settings
-      include osx::dock::autohide
-      include osx::finder::empty_trash_securely
-      include osx::disable_app_quarantine
-      include osx::no_network_dsstores
-      include osx::keyboard::capslock_to_control
 
       # utilities
       include ctags
