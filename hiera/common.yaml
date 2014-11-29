@@ -8,8 +8,8 @@ ruby::build::ensure: v20141113
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 51
 
-cabine::tv_dir: "/tmp/tv"
-cabine::movies_dir: "/tmp/movies"
+cabine::tv_dir: "/Volumes/Porsche\ 1/TV"
+cabine::movies_dir: "/Volumes/Porsche\ 2/Movies"
 cabine::server::host: "news-europe.giganews.com"
 cabine::server::port: "563"
 cabine::server::user: "foobarspam"
