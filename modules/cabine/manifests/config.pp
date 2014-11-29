@@ -24,19 +24,19 @@ class cabine::config {
     $sabnzbd_completedir = "${sabnzbd_downloaddir}/complete"
     $sabnzbd_sickbearddir = "${sabnzbd_downloaddir}/sickbeard"
     $sabnzbd_couchpotatodir = "${sabnzbd_downloaddir}/couchpotato"
-    $sabnzbd_sickbeard_category = "sickbeard"
-    $sabnzbd_couchpotato_category = "couchpotato"
+    $sabnzbd_sickbeard_category = 'sickbeard'
+    $sabnzbd_couchpotato_category = 'couchpotato'
     $sabnzbd_apikey = $::cabine_sabnzbd_apikey
     $sabnzbd_nzbkey = $::cabine_sabnzbd_nzbkey
-    $sabnzbd_host = "http://0.0.0.0:8080/"
+    $sabnzbd_host = 'http://0.0.0.0:8080/'
 
     $sickbeard_rootdir = hiera('cabine::tv_dir')
     $sickbeard_configdir = "${::boxen::config::configdir}/sickbeard"
     $sickbeard_logdir = "${::boxen::config::logdir}/sickbeard"
     $sickbeard_datadir = "${::boxen::config::datadir}/sickbeard"
     $sickbeard_repodir = "${sickbeard_datadir}/repo"
-    $sickbeard_port = "8081"
-    $sickbeard_host = "0.0.0.0"
+    $sickbeard_port = '8081'
+    $sickbeard_host = '0.0.0.0'
     $sickbeard_autoprocessdir = "${sickbeard_repodir}/autoProcessTV"
 
     $couchpotato_datadir = "${::boxen::config::datadir}/couchpotato"
@@ -46,12 +46,12 @@ class cabine::config {
     $couchpotato_apikey = hiera('cabine::couchpotato::apikey')
     $couchpotato_dir = hiera('cabine::movies_dir')
 
-    $nzbsrus_uid = "366986"
-    $nzbsrus_hash = "16f72b"
+    $nzbsrus_uid = '366986'
+    $nzbsrus_hash = '16f72b'
 
     $newznab_apikey = $::cabine_lstoll_apikey
 
-    $plex_host = "127.0.0.1:32400"
+    $plex_host = '127.0.0.1:32400'
 
     $python = "${::boxen::config::home}/homebrew/bin/python"
 
