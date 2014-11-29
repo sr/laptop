@@ -26,8 +26,8 @@ class cabine::config {
   $sabnzbd_couchpotatodir = "${sabnzbd_downloaddir}/couchpotato"
   $sabnzbd_sickbeard_category = 'sickbeard'
   $sabnzbd_couchpotato_category = 'couchpotato'
-  $sabnzbd_apikey = $::cabine_sabnzbd_apikey
-  $sabnzbd_nzbkey = $::cabine_sabnzbd_nzbkey
+  $sabnzbd_apikey = hiera('cabine::sabnzbd::apikey')
+  $sabnzbd_nzbkey = hiera('cabine::sabnzbd::nzbkey')
   $sabnzbd_host = 'http://0.0.0.0:8080/'
 
   $sickbeard_rootdir = hiera('cabine::tv_dir')
