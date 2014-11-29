@@ -20,6 +20,11 @@ class people::sr {
   include osx::no_network_dsstores
   include osx::keyboard::capslock_to_control
 
+  package { 'VyprVPN':
+    provider => 'appdmg',
+    source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/2.6.5.2546/VyprVPN_v2.6.5.2546.dmg',
+  }
+
   case $::hostname {
     'stella': {
       include boxen::security
@@ -59,9 +64,6 @@ class people::sr {
         'TuneUp':
           provider => 'appdmg',
           source   => 'http://dvk2ozaytrec6.cloudfront.net/mac3/Sparkle/TuneUp-3.0.6.dmg';
-        'VyprVPN':
-          provider => 'appdmg',
-          source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/VyprVPN-2.1.0.dmg';
       }
 
       # utilities
