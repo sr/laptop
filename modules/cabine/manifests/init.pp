@@ -5,4 +5,5 @@ class cabine {
   require cabine::sabnzbd
   require cabine::couchpotato
   require cabine::plex
+  include transmission
 }

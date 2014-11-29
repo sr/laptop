@@ -73,4 +73,5 @@ github "screen"
 github "steam"
 github "superduper"
 github "sysctl"
+github "transmission"
 
