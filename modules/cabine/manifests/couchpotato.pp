@@ -54,6 +54,10 @@ class cabine::couchpotato(
       section => 'updater',
       setting => 'automatic',
       value   => 'False';
+    'blackhole_enabled':
+      section => 'blackhole',
+      setting => 'enabled',
+      value   => 'False';
     'newznab_api_key':
       section => 'newznab',
       setting => 'api_key',
