@@ -17,8 +17,8 @@ class cabine::couchpotato(
   $executable = "${repodir}/CouchPotato.py"
 
   repository { $repodir:
-    source  => $repo,
     ensure  => $version,
+    source  => $repo,
     require => File[$cabine::config::couchpotato_datadir],
   }
 
@@ -53,10 +53,6 @@ class cabine::couchpotato(
       section => 'newznab',
       setting => 'api_key',
       value   => ",,,${newznab_apikey}";
-    'sabnzbd_category':
-      section => 'sabnzbd',
-      setting => 'category',
-      value   => $sabnzbd_category;
     'sabnzbd_api_key':
       section => 'sabnzbd',
       setting => 'api_key',
