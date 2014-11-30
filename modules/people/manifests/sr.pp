@@ -25,6 +25,11 @@ class people::sr {
     source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/2.6.5.2546/VyprVPN_v2.6.5.2546.dmg',
   }
 
+  sudoers { "Defaults@${::hostname}":
+    type       => 'default',
+    parameters => ['timestamp_timeout=120'],
+  }
+
   case $::hostname {
     'stella': {
       include boxen::security
