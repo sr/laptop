@@ -62,6 +62,10 @@ class cabine::couchpotato(
       section => 'newznab',
       setting => 'api_key',
       value   => ",,,${newznab_apikey}";
+    'transmission_enabled':
+      section => 'transmission',
+      setting => 'enabled',
+      value   => 'True';
     'sabnzbd_api_key':
       section => 'sabnzbd',
       setting => 'api_key',
