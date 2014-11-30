@@ -75,7 +75,7 @@ class cabine::couchpotato(
       setting => 'category',
       value   => $sabnzbd_category;
     'renamer_enabled':
-      section => 'renamer',
+      section => 'sabnzbd',
       setting => 'enabled',
       value   => 'True';
     'renamer_cleanup':
