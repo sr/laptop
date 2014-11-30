@@ -54,6 +54,10 @@ class cabine::couchpotato(
       section => 'updater',
       setting => 'automatic',
       value   => 'False';
+    'thepiratebay_enabled':
+      section => 'thepiratebay',
+      setting => 'enabled',
+      value   => 'True';
     'blackhole_enabled':
       section => 'blackhole',
       setting => 'enabled',
