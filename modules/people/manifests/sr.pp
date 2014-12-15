@@ -74,6 +74,7 @@ class people::sr {
       # utilities
       include ctags
       package { [
+        'bash-completion',
         'cowsay',
         'dash',
         'fortune',
