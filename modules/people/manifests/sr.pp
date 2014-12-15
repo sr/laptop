@@ -74,21 +74,21 @@ class people::sr {
       # utilities
       include ctags
       package { [
+        'ansible',
         'bash-completion',
         'cowsay',
         'dash',
         'fortune',
+        'jq',
+        'keychain',
         'mplayer',
         'pstree',
         'pwgen',
-        'tig',
-        'wget',
-        'tree',
-        'jq',
         'siege',
-        'ansible',
-        'keychain',
         'ssh-copy-id',
+        'tig',
+        'tree',
+        'wget',
       ]: }
 
       # setup all of the projects
