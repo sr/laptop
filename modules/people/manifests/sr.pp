@@ -82,6 +82,7 @@ class people::sr {
         'jq',
         'keychain',
         'mplayer',
+        'notmuch',
         'pstree',
         'pwgen',
         'siege',
