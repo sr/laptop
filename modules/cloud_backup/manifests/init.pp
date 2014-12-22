@@ -15,11 +15,13 @@ class cloud_backup(
   }
 
   cloud_backup::agent {
+    'fastmail':
+      interval => '86400';
     'github':
       interval => '432000';
     'omnifaria':
       interval => '432000';
     'irclogs':
-      interval => '432000';
+      interval => '86400';
   }
 }
