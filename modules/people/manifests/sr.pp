@@ -1,17 +1,8 @@
 class people::sr {
   $boxen_bin = "${::boxen_home}/bin"
-
   $home = "/Users/${::boxen_user}"
 
-  # backup configs
-  $backup_github_bin = "${home}/bin/backup-github"
-  $backup_github_dir = "${home}/Documents/GitHub"
-  $backup_github_log = "${::boxen::config::logdir}/backup-github.log"
-  $backup_github_interval = '432000'
-  $backup_omnifaria_bin = "${home}/bin/backup-omnifaria"
-  $backup_omnifaria_dir = "${home}/Documents/Omnifaria"
-  $backup_omnifaria_log = "${::boxen::config::logdir}/backup-omnifaria.log"
-  $backup_omnifaria_interval = '432000'
+  include cloud_backup
 
   # osx settings
   include osx::dock::autohide
@@ -33,16 +24,6 @@ class people::sr {
   case $::hostname {
     'stella': {
       include boxen::security
-
-      /* file { "${home}/Library/LaunchAgents/backup.github.plist": */
-      /*   content => template('people/backup.github.plist.erb'), */
-      /*   notify  => Service['backup.github'], */
-      /* } */
-
-      /* file { "${home}/Library/LaunchAgents/backup.omnifaria.plist": */
-      /*   content => template('people/backup.omnifaria.plist.erb'), */
-      /*   notify  => Service['backup.omnifaria'], */
-      /* } */
 
       # ~/tmp
       file { "/Users/${::boxen_user}/tmp":
@@ -127,19 +108,6 @@ class people::sr {
         special     => 'hourly',
         environment => [
           'SHELL="/bin/bash"'
-        ],
-      }
-
-      $backup_irclogs = "/Users/${::boxen_user}/bin/backup-irclogs"
-
-      cron { 'backup-irclogs':
-        command     => $backup_irclogs,
-        user        => $::boxen_user,
-        special     => absent,
-        hour        => '*/6',
-        environment => [
-          'SHELL="/bin/bash"',
-          'PATH="/Users/sr/bin:/usr/bin:/bin"',
         ],
       }
 
