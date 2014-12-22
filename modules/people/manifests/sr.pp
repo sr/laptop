@@ -64,6 +64,7 @@ class people::sr {
         'keychain',
         'mplayer',
         'notmuch',
+        'offlineimap',
         'pstree',
         'pwgen',
         'siege',
