@@ -3,6 +3,7 @@ class cabine::sabnzbd(
   $version = '0.7.20',
   $host = '0.0.0.0',
   $port = '8080',
+  $servicename = 'dev.sabnzbd',
 ) {
 
   # sabnzbd ini config settings
@@ -45,14 +46,14 @@ class cabine::sabnzbd(
     content => template('cabine/sabnzbd2.ini.erb'),
     replace => false,
     require => File[$configdir],
-    notify  => Service['dev.sabnzbd'],
+    notify  => Service[$servicename],
   }
 
   Ini_setting {
     path => $configfile,
     ensure => present,
     require => File[$configfile],
-    notify  => Service['dev.sabnzbd'],
+    notify  => Service[$servicename],
   }
 
   ini_setting {
@@ -98,10 +99,10 @@ class cabine::sabnzbd(
     content => template('cabine/dev.sabnzbd.plist.erb'),
     group   => 'wheel',
     owner   => 'root',
-    notify  => Service['dev.sabnzbd'],
+    notify  => Service[$servicename],
   }
 
-  service { 'dev.sabnzbd':
+  service { $servicename:
     ensure  => running,
     require => Repository[$repodir],
   }
