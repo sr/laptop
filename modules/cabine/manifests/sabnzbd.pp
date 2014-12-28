@@ -1,11 +1,11 @@
 class cabine::sabnzbd(
   $repo    = 'sabnzbd/sabnzbd',
   $version = '0.7.20',
+  $host = '0.0.0.0',
+  $port = '8080',
 ) {
 
   # sabnzbd ini config settings
-  $host = '0.0.0.0'
-  $port = '8080'
   $logdir = $cabine::config::sabnzbd_logdir
   $admindir = $cabine::config::sabnzbd_admindir
   $downloaddir = $cabine::config::sabnzbd_incompletedir
