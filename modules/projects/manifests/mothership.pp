@@ -11,7 +11,7 @@ class projects::mothership {
     nginx      => true,
     postgresql => true,
     redis      => true,
-    ruby       => '2.1.5',
+    ruby       => '2.2.0',
     require    => File[$srcdir],
   }
 }
