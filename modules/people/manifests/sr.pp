@@ -2,8 +2,6 @@ class people::sr {
   $boxen_bin = "${::boxen_home}/bin"
   $home = "/Users/${::boxen_user}"
 
-  include cloud_backup
-
   # osx settings
   include osx::dock::autohide
   include osx::finder::empty_trash_securely
@@ -24,6 +22,7 @@ class people::sr {
   case $::hostname {
     'stella': {
       include boxen::security
+      include cloud_backup
 
       # ~/tmp
       file { "/Users/${::boxen_user}/tmp":
