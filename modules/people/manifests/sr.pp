@@ -36,6 +36,7 @@ class people::sr {
       include firefox
       include onepassword
       include screen
+      include skype
       include steam
       include superduper
 
