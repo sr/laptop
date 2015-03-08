@@ -12,12 +12,13 @@ define cloud_backup::agent(
 
   file { $plist:
     content => template('cloud_backup/backup.agent.plist.erb'),
-    notify  => Exec["reload ${plist}"],
   }
 
   exec { "reload ${plist}":
-    command => "launchctl unload ${plist}; launchctl load ${plist}",
-    user    => $::boxen_user,
-    group   => 'staff',
+    command     => "launchctl unload ${plist}; launchctl load ${plist}",
+    user        => $::boxen_user,
+    group       => 'staff',
+    refreshonly => true,
+    subscribe   => File[$plist],
   }
 }
