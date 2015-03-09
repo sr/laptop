@@ -32,6 +32,8 @@ class people::sr {
       # apps
       include chrome
       include dash
+      include virtualbox
+      include docker
       include dropbox
       include firefox
       include onepassword
