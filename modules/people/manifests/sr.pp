@@ -76,6 +76,7 @@ class people::sr {
         'tig',
         'tree',
         'wget',
+        'youtube-dl',
       ]: }
 
       package { 'protobuf':
