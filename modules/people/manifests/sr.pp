@@ -58,6 +58,7 @@ class people::sr {
       include ctags
       package { [
         'ansible',
+        'awsebcli',
         'bash-completion',
         'cowsay',
         'dash',
@@ -75,6 +76,14 @@ class people::sr {
         'tree',
         'wget',
       ]: }
+
+      package { 'protobuf':
+        ensure => present,
+        install_options => [
+          '--devel',
+          '--c++11',
+        ]
+      }
 
       # setup all of the projects
       include projects::all
