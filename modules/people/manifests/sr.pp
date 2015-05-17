@@ -66,6 +66,7 @@ class people::sr {
         'jq',
         'keychain',
         'mplayer',
+        'namebench',
         'notmuch',
         'offline-imap',
         'pstree',
