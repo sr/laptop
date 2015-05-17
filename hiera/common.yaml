@@ -5,6 +5,8 @@ ruby::version::alias:
   2.0.0: 2.0.0-p353
 ruby::build::ensure: v20150413
 
+docker::version: '1.6.2'
+
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 51
 
