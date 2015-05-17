@@ -70,6 +70,7 @@ class people::sr {
         'offline-imap',
         'pstree',
         'pwgen',
+        's3cmd',
         'siege',
         'ssh-copy-id',
         'tig',
