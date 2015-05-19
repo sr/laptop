@@ -80,6 +80,9 @@ class people::sr {
         'youtube-dl',
       ]: }
 
+      homebrew::tap { 'grpc/grpc': }
+      package { 'grpc/grpc/grpc': }
+
       package { 'protobuf':
         ensure => present,
         install_options => [
