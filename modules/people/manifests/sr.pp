@@ -20,6 +20,15 @@ class people::sr {
   }
 
   case $::hostname {
+    'frida': {
+      include boxen::security
+
+      # ~/tmp
+      file { "/Users/${::boxen_user}/tmp":
+        ensure => directory;
+      }
+    }
+
     'stella': {
       include boxen::security
       include cloud_backup
