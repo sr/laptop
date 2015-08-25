@@ -6,6 +6,11 @@ class people::sr {
 
   case $::hostname {
     'frida': {
+      package {
+        'OmniFocus':
+          provider => 'appdmg_eula',
+          source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.2.4.dmg';
+      }
     }
     'stella': {
       include cloud_backup
@@ -24,9 +29,6 @@ class people::sr {
       include superduper
 
       package {
-        'Backblaze':
-          provider => 'appdmg',
-          source   => 'https://secure.backblaze.com/mac/install_backblaze.dmg';
         'OmniFocus':
           provider => 'appdmg_eula',
           source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.6/OmniFocus-1.10.6.dmg';
@@ -37,29 +39,6 @@ class people::sr {
 
       # utilities
       include ctags
-      package { [
-        'ansible',
-        'awsebcli',
-        'bash-completion',
-        'cowsay',
-        'dash',
-        'fortune',
-        'jq',
-        'keychain',
-        'mplayer',
-        'namebench',
-        'notmuch',
-        'offline-imap',
-        'pstree',
-        'pwgen',
-        's3cmd',
-        'siege',
-        'ssh-copy-id',
-        'tig',
-        'tree',
-        'wget',
-        'youtube-dl',
-      ]: }
 
       homebrew::tap { 'grpc/grpc': }
       package { 'grpc/grpc/grpc': }
