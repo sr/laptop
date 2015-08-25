@@ -5,6 +5,7 @@ class people::sr {
   # osx settings
   include osx::dock::autohide
   include osx::finder::empty_trash_securely
+  include osx::finder::unhide_library
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
   include osx::keyboard::capslock_to_control
