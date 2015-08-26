@@ -25,7 +25,9 @@ class people::sr::common {
     'VyprVPN':
       provider => 'appdmg',
       source   => 'http://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/2.6.5.2546/VyprVPN_v2.6.5.2546.dmg';
-
+    'Kindle':
+      provider => 'appdmg',
+      source   => 'http://kindleformac.amazon.com/40961/KindleForMac.dmg';
   }
 
   package { [
