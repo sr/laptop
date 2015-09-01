@@ -40,6 +40,7 @@ class people::sr::common {
     'fortune',
     'jq',
     'keychain',
+    'mosh',
     'mplayer',
     'namebench',
     'notmuch',
