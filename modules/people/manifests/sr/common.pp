@@ -17,6 +17,7 @@ class people::sr::common {
 
   include dropbox
   include screen
+  include chrome
 
   package {
     'Backblaze':
