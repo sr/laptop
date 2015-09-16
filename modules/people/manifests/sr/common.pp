@@ -33,7 +33,6 @@ class people::sr::common {
 
   package { [
     'ansible',
-    'awsebcli',
     'bash-completion',
     'cowsay',
     'dash',
