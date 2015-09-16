@@ -11,6 +11,36 @@ class people::sr {
           provider => 'appdmg_eula',
           source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.2.4.dmg';
       }
+
+      host { 'facebook.com':
+        ensure => present,
+        ip     => '127.0.0.1',
+      }
+
+      host { 'www.facebook.com':
+        ensure => present,
+        ip     => '127.0.0.1',
+      }
+
+      host { 'twitter.com':
+        ensure => present,
+        ip     => '127.0.0.1',
+      }
+
+      host { 'www.twitter.com':
+        ensure => present,
+        ip     => '127.0.0.1',
+      }
+
+      host { 'arseblog.com':
+        ensure => present,
+        ip     => '127.0.0.1',
+      }
+
+      host { 'news.arseblog.com':
+        ensure => present,
+        ip     => '127.0.0.1',
+      }
     }
     'stella': {
       include cloud_backup
