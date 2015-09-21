@@ -41,6 +41,8 @@ class people::sr {
         ensure => present,
         ip     => '127.0.0.1',
       }
+
+      package { 'tarsnap': }
     }
     'stella': {
       include cloud_backup
