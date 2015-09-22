@@ -43,6 +43,10 @@ class people::sr {
       }
 
       package { 'tarsnap': }
+
+      file { '/opt/tarsnap':
+        ensure => directory
+      }
     }
     'stella': {
       include cloud_backup
