@@ -28,7 +28,7 @@ class people::sr {
 
       package { 'tarsnap': }
 
-      file { '/opt/tarsnap':
+      file { ['/opt/tarsnap', '/opt/tarsnap/cache']:
         ensure => directory
       }
     }
