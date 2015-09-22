@@ -12,32 +12,16 @@ class people::sr {
           source   => 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.10/OmniFocus-2.2.4.dmg';
       }
 
-      host { 'facebook.com':
-        ensure => present,
-        ip     => '127.0.0.1',
-      }
+      $hosts = [
+        'facebook.com',
+        'www.facebook.com',
+        'twitter.com',
+        'www.twitter.com',
+        'arseblog.com',
+        'news.arseblog.com',
+      ]
 
-      host { 'www.facebook.com':
-        ensure => present,
-        ip     => '127.0.0.1',
-      }
-
-      host { 'twitter.com':
-        ensure => present,
-        ip     => '127.0.0.1',
-      }
-
-      host { 'www.twitter.com':
-        ensure => present,
-        ip     => '127.0.0.1',
-      }
-
-      host { 'arseblog.com':
-        ensure => present,
-        ip     => '127.0.0.1',
-      }
-
-      host { 'news.arseblog.com':
+      host { $hosts:
         ensure => present,
         ip     => '127.0.0.1',
       }
