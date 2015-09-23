@@ -47,6 +47,7 @@ class people::sr::common {
     'pstree',
     'pwgen',
     's3cmd',
+    'shellcheck',
     'siege',
     'ssh-copy-id',
     'tig',
