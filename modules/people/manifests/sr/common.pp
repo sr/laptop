@@ -46,6 +46,7 @@ class people::sr::common {
     's3cmd',
     'shellcheck',
     'ssh-copy-id',
+    'terraform',
     'tig',
     'tree',
     'wget',
