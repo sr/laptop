@@ -21,6 +21,8 @@ class people::sr {
         'www.twitter.com',
         'arseblog.com',
         'news.arseblog.com',
+        'theguardian.com',
+        'www.theguardian.com',
       ]
 
       host { $hosts:
