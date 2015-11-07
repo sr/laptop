@@ -11,10 +11,6 @@ class people::sr::common {
     parameters => ['timestamp_timeout=1440'],
   }
 
-  file { "/Users/${::boxen_user}/tmp":
-    ensure => directory;
-  }
-
   include dropbox
   include screen
   include chrome
