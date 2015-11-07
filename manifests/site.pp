@@ -66,8 +66,6 @@ node default {
   ruby::version { '2.2.2': }
 
   # node versions
-  nodejs::version { '0.8': }
-  nodejs::version { '0.10': }
   nodejs::version { '0.12': }
 
   # common, useful packages
