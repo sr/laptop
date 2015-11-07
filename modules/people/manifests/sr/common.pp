@@ -28,24 +28,12 @@ class people::sr::common {
   }
 
   package { [
-    'ansible',
     'bash-completion',
-    'cowsay',
-    'dash',
-    'fortune',
-    'jq',
     'mosh',
-    'mplayer',
     'namebench',
     'pstree',
-    'pwgen',
-    's3cmd',
-    'shellcheck',
     'ssh-copy-id',
-    'terraform',
     'tig',
     'tree',
-    'wget',
-    'youtube-dl',
   ]: }
 }
