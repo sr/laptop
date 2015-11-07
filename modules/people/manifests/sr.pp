@@ -6,8 +6,6 @@ class people::sr {
 
   case $::hostname {
     'frida': {
-      include people::sr::pachyderm
-
       package {
         'OmniFocus':
           provider => 'appdmg_eula',
