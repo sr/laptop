@@ -40,12 +40,7 @@ class people::sr {
     'namebench',
     'pstree',
     'ssh-copy-id',
-    'tarsnap',
     'tig',
     'tree',
   ]: }
-
-  file { ['/opt/tarsnap', '/opt/tarsnap/cache']:
-    ensure => directory
-  }
 }
