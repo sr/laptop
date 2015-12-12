@@ -45,22 +45,6 @@ class people::sr {
     'tree',
   ]: }
 
-  $hosts = [
-    'facebook.com',
-    'www.facebook.com',
-    'twitter.com',
-    'www.twitter.com',
-    'arseblog.com',
-    'news.arseblog.com',
-    'theguardian.com',
-    'www.theguardian.com',
-  ]
-
-  host { $hosts:
-    ensure => present,
-    ip     => '127.0.0.1',
-  }
-
   file { ['/opt/tarsnap', '/opt/tarsnap/cache']:
     ensure => directory
   }
