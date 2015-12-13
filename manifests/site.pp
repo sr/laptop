@@ -74,6 +74,11 @@ node default {
     ]:
   }
 
+  sudoers { "Defaults@${::hostname}":
+    type       => 'default',
+    parameters => ['timestamp_timeout=1440'],
+  }
+
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
