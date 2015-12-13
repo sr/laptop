@@ -39,7 +39,6 @@ Repository {
   extra    => [
     '--recurse-submodules'
   ],
-  require  => File["${boxen::config::bindir}/boxen-git-credential"]
 }
 
 Service {
