@@ -1,6 +1,6 @@
 This is the [Boxen][] project I use to setup my personnal Apple laptop. See
 also [sr/ansible-playbook-dev][ansible] for how I setup the remote machine
-which is where I do all of my development work these days.
+where I do all of my development work these days.
 
 ```
 $ hostname -f
