@@ -1,0 +1,23 @@
+boxen::personal::includes:
+  - osx::dock::autohide
+  - osx::finder::empty_trash_securely
+  - osx::finder::unhide_library
+  - osx::disable_app_quarantine
+  - osx::no_network_dsstores
+  - osx::keyboard::capslock_to_control
+boxen::personal::osx_apps:
+  - dropbox
+  - backblaze
+  - google-chrome
+  - kindle
+  - omnifocus
+  - vyprvpn
+boxen::personal::homebrew_packages:
+  - bash-completion
+  - homebrew/dupes/screen
+  - mosh
+  - namebench
+  - pstree
+  - ssh-copy-id
+  - tig
+  - tree
