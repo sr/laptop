@@ -9,16 +9,3 @@ docker::version: '1.6.2'
 
 # See https://github.com/boxen/puppet-java for docs
 java::update_version: 51
-
-cabine::tv_dir: "/Volumes/Porsche\ 1/TV"
-cabine::movies_dir: "/Volumes/Porsche\ 2/Movies"
-cabine::server::host: "news-europe.giganews.com"
-cabine::server::port: "563"
-cabine::server::user: "foobarspam"
-cabine::server::password: "N2bkDbGbraPg9c"
-cabine::server::ssl: "1"
-cabine::server::connections: "25"
-cabine::server::retention: "2306"
-cabine::sabnzbd::apikey: "3ee542aad0010126c9bd56ef59469f13"
-cabine::sabnzbd::nzbkey: "d3899a43e6393f682bae696deac89bc6"
-cabine::couchpotato::apikey: "ed5380776dc54afc9995d9a4b367be8e"
