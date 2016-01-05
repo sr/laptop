@@ -11,6 +11,7 @@ boxen::personal::osx_apps:
   - google-chrome
   - kindle
   - omnifocus
+  - openra
   - vyprvpn
 boxen::personal::homebrew_packages:
   - bash-completion
