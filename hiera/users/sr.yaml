@@ -12,6 +12,7 @@ boxen::personal::osx_apps:
   - kindle
   - omnifocus
   - openra
+  - skype
   - vyprvpn
 boxen::personal::homebrew_packages:
   - bash-completion
