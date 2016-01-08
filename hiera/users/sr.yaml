@@ -6,8 +6,9 @@ boxen::personal::includes:
   - osx::no_network_dsstores
   - osx::keyboard::capslock_to_control
 boxen::personal::osx_apps:
-  - dropbox
   - backblaze
+  - cumulus
+  - dropbox
   - google-chrome
   - kindle
   - omnifocus
