@@ -15,6 +15,7 @@ boxen::personal::osx_apps:
   - omnifocus-clip-o-tron
   - openra
   - skype
+  - steam
   - vyprvpn
 boxen::personal::homebrew_packages:
   - bash-completion
